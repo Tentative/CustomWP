@@ -68,13 +68,13 @@
 </head>
 
 <body <?php body_class(); ?>>
-<?php do_action('slideshow_deploy', '7'); ?>
 <div id="page" class="hfeed">
 	<header id="branding" role="banner">
 			<hgroup>
 				<h1 id="site-title"><span><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span></h1>
 				<h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>
 			</hgroup>
+			
 
 			<?php
 				// Check to see if the header image has been removed
@@ -131,7 +131,9 @@
 			<?php endif; ?>
 
 			<nav id="access" role="navigation">
+			
 				<h3 class="assistive-text"><?php _e( 'Main menu', 'twentyeleven' ); ?></h3>
+				
 				<?php /* Allow screen readers / text browsers to skip the navigation menu and get right to the good stuff. */ ?>
 				<div class="skip-link"><a class="assistive-text" href="#content"><?php _e( 'Skip to primary content', 'twentyeleven' ); ?></a></div>
 				<?php if ( ! is_singular() ) : ?>
@@ -139,8 +141,14 @@
 				<?php endif; ?>
 				<?php /* Our navigation menu. If one isn't filled out, wp_nav_menu falls back to wp_page_menu. The menu assigned to the primary location is the one used. If one isn't assigned, the menu with the lowest ID is used. */ ?>
 				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+				
 			</nav><!-- #access -->
+			
 	</header><!-- #branding -->
+	
 
 
 	<div id="main">
+	<?php 
+    echo do_shortcode("[metaslider id=22]"); 
+?>

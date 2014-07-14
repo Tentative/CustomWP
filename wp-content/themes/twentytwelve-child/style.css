@@ -65,9 +65,16 @@ blockquote, q {
 a img {
 	border: 0;
 }
-article, aside, details, figcaption, figure,
+article, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
+}
+aside {
+	display: block;
+	top: -20px;
+	position: top;
+	right: 100%;
+	
 }
 
 
